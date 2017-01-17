@@ -6,7 +6,7 @@ Check out the original source [haste-server](https://github.com/seejohnrun/haste
 
 ## Start a hastebin instance
 ```
-docker run p 7777:7777 -d jonberenguer/hastebin-server
+docker run -p 7777:7777 -d jonberenguer/hastebin-server
 ```
 
 ## POST to hastebin
