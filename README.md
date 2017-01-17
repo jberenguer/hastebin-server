@@ -4,6 +4,11 @@ This is just a has autobuild repo for a haste-server
 
 Check out the original source [haste-server](https://github.com/seejohnrun/haste-server)
 
+## Start a hastebin instance
+```
+docker run p 7777:7777 -d jonberenguer/hastebin-server
+```
+
 ## POST to hastebin
 Simple client-side function to post to hastebin
 ### For linux
