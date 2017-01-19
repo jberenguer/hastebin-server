@@ -11,12 +11,16 @@ docker run -p 7777:7777 -d jonberenguer/hastebin-server
 
 ## POST to hastebin
 Simple client-side function to post to hastebin
-### For linux
+### For Linux
 ```
 haste() { a=$(cat); curl -X POST -s -d "$a" http://localhost:7777/documents | awk -F '"' '{print "http://localhost:7777/"$4}'; }
 ```
-
 ### For Windows
 ```
 function haste { param([Parameter(Mandatory=$True,ValueFromPipeline=$True,ValueFromPipelinebyPropertyName=$True)] [string[]] $data) ; $key = (Invoke-RestMethod -Uri http://localhost:7777/documents -Method POST -Body $data).key.trim() ; Write-Host "http://localhost:7777/$key"}
+```
+
+Test command after you created the function:
+```
+echo "Successful POST" | hastebin
 ```
